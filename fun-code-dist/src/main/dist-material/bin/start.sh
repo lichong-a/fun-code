@@ -3,7 +3,7 @@ PRG="$0"
 PRGDIR=$(dirname "$PRG")
 [ -z "$CODE_HOME" ] && CODE_HOME=$(cd "$PRGDIR/.." > /dev/null || exit 1; pwd)
 
-APP_NAME="demo"
+APP_NAME="webmvc-demo"
 echo "开始启动$JAVA_OPTS..."
 DUMP_DIR=${CODE_HOME}/dump
 CODE_LOG_DIR=${CODE_LOG_DIR:-"${CODE_HOME}/logs"}

@@ -35,7 +35,7 @@
     </fileSets>
     <files>
         <file>
-            <source>${project.basedir}/../demo/target/demo.jar</source>
+            <source>${project.basedir}/../webmvc-demo/target/webmvc-demo.jar</source>
             <outputDirectory>source</outputDirectory>
             <fileMode>0644</fileMode>
         </file>
