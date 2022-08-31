@@ -1,0 +1,9 @@
+server:
+  port: 9094
+  servlet:
+    context-path: /webflux-demo
+spring:
+  profiles:
+    active: review
+  application:
+    name: webflux-demo

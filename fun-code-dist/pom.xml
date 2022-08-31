@@ -12,14 +12,27 @@
 
     <profiles>
         <profile>
-            <id>demo-dist</id>
+            <id>webmvc-demo-dist</id>
             <activation>
                 <activeByDefault>true</activeByDefault>
             </activation>
             <dependencies>
                 <dependency>
                     <groupId>work.lichong</groupId>
-                    <artifactId>demo</artifactId>
+                    <artifactId>webmvc-demo</artifactId>
+                    <version>${project.version}</version>
+                </dependency>
+            </dependencies>
+        </profile>
+        <profile>
+            <id>webflux-demo-dist</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <dependencies>
+                <dependency>
+                    <groupId>work.lichong</groupId>
+                    <artifactId>webflux-demo</artifactId>
                     <version>${project.version}</version>
                 </dependency>
             </dependencies>

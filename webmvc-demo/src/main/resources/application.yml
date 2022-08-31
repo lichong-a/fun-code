@@ -1,0 +1,14 @@
+server:
+  port: 9093
+  servlet:
+    context-path: /webmvc-demo
+project:
+  version: '@project.version@'
+spring:
+  profiles:
+    active: review
+  application:
+    name: webmvc-demo
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
