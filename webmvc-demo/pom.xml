@@ -11,7 +11,8 @@
 
     <name>webmvc-demo</name>
     <artifactId>webmvc-demo</artifactId>
-    <description>webmvc-demo</description>
+    <description>集成spring mvc的示例demo</description>
+    <packaging>jar</packaging>
 
     <properties>
         <web.dir>${project.parent.basedir}/demo-web</web.dir>

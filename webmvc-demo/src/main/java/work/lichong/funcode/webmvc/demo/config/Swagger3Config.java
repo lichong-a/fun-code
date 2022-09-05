@@ -2,7 +2,7 @@
  * Copyright (c) 2022. 李冲. All rights reserved.
  */
 
-package work.lichong.webmvc.demo.config;
+package work.lichong.funcode.webmvc.demo.config;
 
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.annotation.Value;

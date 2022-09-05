@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
     <parent>
         <artifactId>fun-code</artifactId>
         <groupId>work.lichong</groupId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
-    <modelVersion>4.0.0</modelVersion>
 
+    <name>fun-code-dist</name>
     <artifactId>fun-code-dist</artifactId>
+    <description>打包模块</description>
     <packaging>pom</packaging>
 
     <profiles>
@@ -76,7 +80,8 @@
                         </goals>
                         <configuration>
                             <target>
-                                <copy file="${project.build.directory}/fun-code-bin.tar.gz" tofile="${project.basedir}/../dist/fun-code-bin.tar.gz" overwrite="true" />
+                                <copy file="${project.build.directory}/fun-code-bin.tar.gz"
+                                      tofile="${project.basedir}/../dist/fun-code-bin.tar.gz" overwrite="true"/>
                             </target>
                         </configuration>
                     </execution>

@@ -2,7 +2,7 @@
  * Copyright (c) 2022. 李冲. All rights reserved.
  */
 
-package work.lichong.webmvc.demo.config;
+package work.lichong.funcode.webmvc.demo.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;

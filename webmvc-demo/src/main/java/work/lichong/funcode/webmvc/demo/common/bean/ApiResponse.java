@@ -2,9 +2,9 @@
  * Copyright (c) 2022. 李冲. All rights reserved.
  */
 
-package work.lichong.webmvc.demo.common.bean;
+package work.lichong.funcode.webmvc.demo.common.bean;
 
-import work.lichong.webmvc.demo.common.enumeration.ResponseStatus;
+import work.lichong.funcode.webmvc.demo.common.enumeration.ResponseStatus;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 

@@ -2,7 +2,7 @@
  * Copyright (c) 2022. 李冲. All rights reserved.
  */
 
-package work.lichong.webmvc.demo.controller;
+package work.lichong.funcode.webmvc.demo.controller;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -10,9 +10,9 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import work.lichong.webmvc.demo.common.bean.ApiResponse;
-import work.lichong.webmvc.demo.common.enumeration.ResponseStatus;
-import work.lichong.webmvc.demo.model.User;
+import work.lichong.funcode.webmvc.demo.common.bean.ApiResponse;
+import work.lichong.funcode.webmvc.demo.common.enumeration.ResponseStatus;
+import work.lichong.funcode.webmvc.demo.model.User;
 
 /**
  * @author lichong

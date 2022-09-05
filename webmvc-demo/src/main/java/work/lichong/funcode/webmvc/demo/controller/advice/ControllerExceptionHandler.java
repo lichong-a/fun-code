@@ -2,10 +2,10 @@
  * Copyright (c) 2022. 李冲. All rights reserved.
  */
 
-package work.lichong.webmvc.demo.controller.advice;
+package work.lichong.funcode.webmvc.demo.controller.advice;
 
-import work.lichong.webmvc.demo.common.bean.ApiResponse;
-import work.lichong.webmvc.demo.common.enumeration.ResponseStatus;
+import work.lichong.funcode.webmvc.demo.common.bean.ApiResponse;
+import work.lichong.funcode.webmvc.demo.common.enumeration.ResponseStatus;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;

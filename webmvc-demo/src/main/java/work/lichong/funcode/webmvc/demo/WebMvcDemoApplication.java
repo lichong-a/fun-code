@@ -1,4 +1,4 @@
-package work.lichong.webmvc.demo;
+package work.lichong.funcode.webmvc.demo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

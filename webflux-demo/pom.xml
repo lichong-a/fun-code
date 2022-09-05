@@ -10,7 +10,8 @@
 
     <name>webflux-demo</name>
     <artifactId>webflux-demo</artifactId>
-    <description>webflux-demo</description>
+    <description>集成spring webflux的示例demo</description>
+    <packaging>jar</packaging>
 
     <dependencies>
         <dependency>

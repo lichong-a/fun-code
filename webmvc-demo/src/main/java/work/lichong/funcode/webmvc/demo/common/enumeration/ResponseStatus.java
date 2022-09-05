@@ -1,4 +1,4 @@
-package work.lichong.webmvc.demo.common.enumeration;
+package work.lichong.funcode.webmvc.demo.common.enumeration;
 
 /**
  * http api 状态码

@@ -1,4 +1,4 @@
-package work.lichong.webflux.demo;
+package work.lichong.funcode.webflux.demo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
