@@ -70,4 +70,22 @@ public class LRUCache {
     public void put(int key, int value) {
 
     }
+
+    public static void main(String[] args) {
+        LRUCache lRUCache = new LRUCache(2);
+        lRUCache.put(1, 1);
+        lRUCache.put(2, 2);
+        // 返回 1
+        lRUCache.get(1);
+        lRUCache.put(3, 3);
+        // 返回 -1 (未找到)
+        lRUCache.get(2);
+        lRUCache.put(4, 4);
+        // 返回 -1 (未找到)
+        lRUCache.get(1);
+        // 返回 3
+        lRUCache.get(3);
+        // 返回 4
+        lRUCache.get(4);
+    }
 }

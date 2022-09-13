@@ -19,9 +19,6 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupp
 public class WebMvcConfiguration extends WebMvcConfigurationSupport {
     @Override
     public void addViewControllers(ViewControllerRegistry registry) {
-        // 前后分离之后SpringBoot+SpringSecurity放行Swagger访问后,security跨域配置失效的问题
-        registry.addViewController("/swagger-ui/")
-                .setViewName("forward:/swagger-ui/index.html");
         registry.addRedirectViewController("/", "/index.html");
     }
 
@@ -30,9 +27,6 @@ public class WebMvcConfiguration extends WebMvcConfigurationSupport {
         registry.addResourceHandler("/**")
                 .addResourceLocations("classpath:/static/")
                 .setCachePeriod(31556926);
-        registry.addResourceHandler("/swagger-ui/**")
-                .addResourceLocations("classpath:/META-INF/resources/webjars/springfox-swagger-ui/")
-                .resourceChain(false);
     }
 
     @Override

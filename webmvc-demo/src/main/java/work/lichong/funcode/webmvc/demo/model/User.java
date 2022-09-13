@@ -4,8 +4,8 @@
 
 package work.lichong.funcode.webmvc.demo.model;
 
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.SchemaProperty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -18,16 +18,16 @@ import lombok.NoArgsConstructor;
  * @since 0.0.1
  */
 @Data
-@ApiModel(value = "人员")
+@Schema(name = "人员")
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
 @EqualsAndHashCode
 public class User {
 
-    @ApiModelProperty("姓名")
+    @SchemaProperty(name = "姓名")
     private String name;
-    @ApiModelProperty("年龄")
+    @SchemaProperty(name = "年龄")
     private Integer age;
 
 }

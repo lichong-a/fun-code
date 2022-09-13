@@ -4,9 +4,9 @@
 
 package work.lichong.funcode.webmvc.demo.common.bean;
 
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.SchemaProperty;
 import work.lichong.funcode.webmvc.demo.common.enumeration.ResponseStatus;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 
 /**
  * 统一返回结果
@@ -15,21 +15,21 @@ import io.swagger.annotations.ApiModelProperty;
  * @see <a href="https://lichong.work">李冲博客</a>
  * @since 0.0.1
  */
-@ApiModel(value = "统一返回结果")
+@Schema(name= "统一返回结果", title= "统一返回结果")
 public class ApiResponse<T> {
 
-    @ApiModelProperty(value = "状态码")
+    @SchemaProperty(name = "状态码")
     private Integer status;
 
-    @ApiModelProperty(value = "响应信息")
+    @SchemaProperty(name = "响应信息")
     private String message;
 
-    @ApiModelProperty(value = "响应体数据")
+    @SchemaProperty(name = "响应体数据")
     private T data;
     /**
      * 是否压缩数据  gzip
      */
-    @ApiModelProperty(value = "是否gzip压缩数据")
+    @SchemaProperty(name = "是否gzip压缩数据")
     private boolean compressData;
 
     public ApiResponse(String message) {

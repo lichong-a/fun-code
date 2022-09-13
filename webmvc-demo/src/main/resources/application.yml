@@ -3,7 +3,7 @@ server:
   servlet:
     context-path: /webmvc-demo
 project:
-  version: '@project.version@'
+  version: @project.version@
 spring:
   profiles:
     active: review
@@ -12,3 +12,10 @@ spring:
   mvc:
     pathmatch:
       matching-strategy: ant_path_matcher
+springdoc:
+  api-docs:
+    version: OPENAPI_3_0
+  swagger-ui:
+    path: /swagger-ui
+    enabled: true
+    validator-url: none

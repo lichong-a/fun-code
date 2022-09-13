@@ -1,10 +1,10 @@
 package work.lichong.funcode.webmvc.demo.common.bean;
 
-import work.lichong.funcode.webmvc.demo.common.enumeration.ResponseStatus;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.SchemaProperty;
 import lombok.Getter;
 import lombok.Setter;
+import work.lichong.funcode.webmvc.demo.common.enumeration.ResponseStatus;
 
 /**
  * 统一返回结果
@@ -13,12 +13,12 @@ import lombok.Setter;
  * @see <a href="https://lichong.work">李冲博客</a>
  * @since 0.0.1
  */
-@ApiModel(value = "带数量的统一返回结果", parent = ApiResponse.class)
+@Schema(name = "带数量的统一返回结果",title = "带数量的统一返回结果")
 public class ApiResponseWithCount<T> extends ApiResponse<T> {
 
     @Getter
     @Setter
-    @ApiModelProperty(value = "数量")
+    @SchemaProperty(name = "数量")
     private long count;
 
     public ApiResponseWithCount(ResponseStatus status, T data) {

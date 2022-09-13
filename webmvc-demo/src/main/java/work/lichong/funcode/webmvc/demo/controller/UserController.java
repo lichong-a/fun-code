@@ -4,8 +4,8 @@
 
 package work.lichong.funcode.webmvc.demo.controller;
 
-import io.swagger.annotations.Api;
-import io.swagger.annotations.ApiOperation;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -20,12 +20,12 @@ import work.lichong.funcode.webmvc.demo.model.User;
  * @since 0.0.1
  */
 @Slf4j
-@Api(tags = "人员操作")
+@Tag(name = "人员操作")
 @RestController
 @RequestMapping("/api")
 public class UserController {
 
-    @ApiOperation(value = "测试")
+    @Operation(summary = "测试")
     @GetMapping("/test")
     public ApiResponse<User> test() {
         User user = User.builder().name("张三").age(18).build();
