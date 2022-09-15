@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <artifactId>webmvc-demo</artifactId>
+        <groupId>work.lichong</groupId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+
+    <name>webmvc-demo-plugin-api</name>
+    <artifactId>webmvc-demo-plugin-api</artifactId>
+    <description>集成spring mvc的示例demo</description>
+    <packaging>jar</packaging>
+
+    <dependencies>
+        <dependency>
+            <groupId>work.lichong</groupId>
+            <artifactId>webmvc-demo-core</artifactId>
+            <version>${project.version}</version>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <finalName>webmvc-demo-plugin-api</finalName>
+    </build>
+
+</project>

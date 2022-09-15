@@ -5,3 +5,8 @@ server:
 spring:
   application:
     name: demo
+code:
+  log:
+    dir: logs
+  lib:
+    dir: ./lib

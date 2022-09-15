@@ -1,0 +1,14 @@
+{
+  "properties": [
+    {
+      "name": "code.log.dir",
+      "type": "java.lang.String",
+      "description": "日志目录."
+    },
+    {
+      "name": "code.lib.dir",
+      "type": "java.lang.String",
+      "description": "第三方依赖包目录."
+    }
+  ]
+}

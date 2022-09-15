@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="true" scanPeriod="60 second" debug="false">
+
+    <springProperty scope="context" name="LOG_DIR" source="code.log.dir" defaultValue="logs"/>
+    <springProperty scope="context" name="LOG_LEVEL_ROOT" source="logback.level.root" defaultValue="info"/>
+    <springProperty scope="context" name="LOG_LEVEL_COMMON" source="logback.level.common" defaultValue="info"/>
+    <springProperty scope="context" name="APP_NAME" source="server.name" defaultValue="webmvc-demo"/>
+
+    <statusListener class="ch.qos.logback.core.status.NopStatusListener"/>
+
+    <appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">
+        <Target>System.out</Target>
+        <encoder>
+            <pattern>%red(%d{yyyy-MM-dd HH:mm:ss}) %green([%thread{2}]) %highlight(%level) %boldMagenta(%logger{5}[%line]) - %cyan(%msg%n)
+            </pattern>
+        </encoder>
+    </appender>
+
+    <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <File>${LOG_DIR}/${APP_NAME}_stdout.log</File>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <FileNamePattern>${LOG_DIR}/${APP_NAME}_stdout.%d{yyyy-MM-dd}.log</FileNamePattern>
+            <maxHistory>7</maxHistory>
+        </rollingPolicy>
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} [%-5level] [%-5thread] %logger{20} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="FILE-ERROR" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>error</level>
+        </filter>
+        <File>${LOG_DIR}/${APP_NAME}_stderr.log</File>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <FileNamePattern>${LOG_DIR}/${APP_NAME}_stderr.%d{yyyy-MM-dd}.log</FileNamePattern>
+            <maxHistory>7</maxHistory>
+        </rollingPolicy>
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} [%-5level] [%-5thread] %logger{20} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <logger name="org.springframework.boot.actuate.endpoint.web.servlet" level="trace">
+        <appender-ref ref="stdout"/>
+    </logger>
+
+    <root level="${LOG_LEVEL_ROOT}">
+        <appender-ref ref="stdout"/>
+        <appender-ref ref="FILE"/>
+        <appender-ref ref="FILE-ERROR"/>
+    </root>
+
+</configuration>

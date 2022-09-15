@@ -4,20 +4,18 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <artifactId>fun-code</artifactId>
+        <artifactId>webmvc-demo-plugins</artifactId>
         <groupId>work.lichong</groupId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <name>webmvc-demo</name>
-    <artifactId>webmvc-demo</artifactId>
+    <name>webmvc-demo-plugin-hello</name>
+    <artifactId>webmvc-demo-plugin-hello</artifactId>
     <description>集成spring mvc的示例demo</description>
-    <packaging>pom</packaging>
+    <packaging>jar</packaging>
 
-    <modules>
-        <module>webmvc-demo-core</module>
-        <module>webmvc-demo-plugins</module>
-        <module>webmvc-demo-plugin-api</module>
-    </modules>
+    <build>
+        <finalName>webmvc-demo-plugin-hello</finalName>
+    </build>
 
 </project>

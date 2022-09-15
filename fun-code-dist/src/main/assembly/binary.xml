@@ -35,8 +35,18 @@
     </fileSets>
     <files>
         <file>
-            <source>${project.basedir}/../webmvc-demo/target/webmvc-demo.jar</source>
+            <source>${project.basedir}/../webmvc-demo/webmvc-demo-core/target/webmvc-demo.jar</source>
             <outputDirectory>source</outputDirectory>
+            <fileMode>0644</fileMode>
+        </file>
+        <file>
+            <source>${project.basedir}/../webmvc-demo/webmvc-demo-plugin-api/target/webmvc-demo-plugin-api.jar</source>
+            <outputDirectory>lib</outputDirectory>
+            <fileMode>0644</fileMode>
+        </file>
+        <file>
+            <source>${project.basedir}/../webmvc-demo/webmvc-demo-plugins/webmvc-demo-plugin-hello/target/webmvc-demo-plugin-hello.jar</source>
+            <outputDirectory>lib</outputDirectory>
             <fileMode>0644</fileMode>
         </file>
     </files>

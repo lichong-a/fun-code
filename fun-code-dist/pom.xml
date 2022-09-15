@@ -23,7 +23,17 @@
             <dependencies>
                 <dependency>
                     <groupId>work.lichong</groupId>
-                    <artifactId>webmvc-demo</artifactId>
+                    <artifactId>webmvc-demo-core</artifactId>
+                    <version>${project.version}</version>
+                </dependency>
+                <dependency>
+                    <groupId>work.lichong</groupId>
+                    <artifactId>webmvc-demo-plugin-api</artifactId>
+                    <version>${project.version}</version>
+                </dependency>
+                <dependency>
+                    <groupId>work.lichong</groupId>
+                    <artifactId>webmvc-demo-plugin-hello</artifactId>
                     <version>${project.version}</version>
                 </dependency>
             </dependencies>
