@@ -20,7 +20,7 @@ fi
 _RUNJAVA=${JAVA_HOME}/bin/java
 
 if [ -z "$JAVA_HOME" ] && [ -z "$CODE_JAVA_HOME" ];then
-    echo "请先配置JAVA运行环境，正在退出..."
+    echo "请先配置JAVA运行环境，可以执行unZipJDK.sh自动配置，正在退出..."
     exit 1;
 fi
 
